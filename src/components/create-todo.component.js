@@ -9,7 +9,7 @@ export default class CreateTodo extends Component {    constructor(props) {
         this.onSubmit = this.onSubmit.bind(this);       
         this.state = {
             todo_description: '',
-            todo_date: [],
+            todo_date: '',
             todo_responsible: '',
             todo_priority: '',
             todo_completed: false
@@ -59,6 +59,7 @@ export default class CreateTodo extends Component {    constructor(props) {
         })
         alert("Record successfully inserted..")
         //swal("Good job!", "Record inserted successfully!", "success");
+        this.props.history.push('/');
        
     }    render() {
         return (
